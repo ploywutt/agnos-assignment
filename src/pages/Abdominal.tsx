@@ -7,17 +7,20 @@ const Abdominal = () => {
   const [selectedRegion, setSelectedRegion] = useState<AbdominalRegion[]>([]);
 
   const handleRegionClick = useCallback((name: AbdominalRegion) => {
-    if (name === "all-pain") {
-      setSelectedRegion(() => absPoints.map((pain) => pain.name));
-    } else {
-      setSelectedRegion((prevRegions) =>
-        prevRegions.includes(name)
-          ? prevRegions.filter(
-              (region) => region !== name && region !== "all-pain"
-            )
-          : [...prevRegions, name]
-      );
-    }
+    setSelectedRegion((prevRegions) => {
+      if (name === "all-pain") {
+        return absPoints.map((point) => point.name);
+      }
+      const isSelected = prevRegions.includes(name);
+      const updatedRegions = isSelected
+        ? prevRegions.filter(
+            (region) => region !== name && region !== "all-pain"
+          )
+        : [...prevRegions, name];
+      return updatedRegions.length === absPoints.length - 1
+        ? absPoints.map((point) => point.name)
+        : updatedRegions;
+    });
   }, []);
 
   return (

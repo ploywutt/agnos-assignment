@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+Pain Assessment Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for assessing and visualizing pain locations in fingers and abdomen regions. Built with React, TypeScript, and D3.js for Voronoi diagram visualizations.
 
-Currently, two official plugins are available:
+🔗 Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Demo https://agnos-assignment-five.vercel.app/
+GitHub Repository https://github.com/ploywutt/agnos-assignment
 
-## Expanding the ESLint configuration
+🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Interactive pain location selection
+Voronoi diagram visualization
+Separate interfaces for finger and abdominal regions
+Responsive design
+Real-time visualization updates
 
-- Configure the top-level `parserOptions` property like this:
+🛠️ Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+React 18
+TypeScript
+Vite
+D3.js
+TailwindCSS
+React Router DOM
+Bun (JavaScript runtime & package manager)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+📦 Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Bun installed on your system
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+🚀 Installation
+
+Clone the repository:
+
+git clone https://github.com/ploywutt/agnos-assignment.git
+
+Navigate to the project directory:
+
+cd agnos-assignment
+
+Install dependencies:
+
+bun install
+
+Start the development server:
+
+bun run dev
+
+Build for production:
+
+bun run build
+
+🔧 Available Scripts
+
+bun run dev - Starts development server
+bun run build - Creates production build (tsc -b && vite build)
+bun run lint - Runs ESLint for code linting
+bun run preview - Previews production build locally

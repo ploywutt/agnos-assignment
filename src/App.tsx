@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./components/navBar/NavBar";
+import NavBar from "./components/navigation/NavBar";
 import Abdominal from "./pages/Abdominal";
 import Finger from "./pages/Finger";
-import BottomBar from "./components/navBar/BottonBar";
+import BottomBar from "./components/navigation/BottonBar";
 
 function App() {
   return (

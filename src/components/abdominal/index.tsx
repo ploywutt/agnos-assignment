@@ -29,7 +29,11 @@ const AbsPain = ({ regions }: AbsPainProps) => (
 
 const AbsDesc = ({ regions }: AbsPainProps) => {
   const hasAllPain = useMemo(
-    () => regions && absPains.every((pain) => regions?.includes(pain.group)),
+    () =>
+      regions &&
+      absPains
+        .filter((pain) => pain.group !== "all-pain")
+        .every((pain) => regions?.includes(pain.group)),
     [regions]
   );
   return (
