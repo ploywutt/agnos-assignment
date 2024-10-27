@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: "Noto Sans Thai", serif;
+    color-scheme: light;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --content1: #30336b;
+    --content2: #ffffff;
+    --primary: #f9ca24;
+    --primary-dark: #f0932b;
+    --primary-light: #f6e58d;
+    --background: #ffffff;
+    --mute: #dbd3d3;
+    --accent: #bcb5b5;
+  }
+
+  * {
+    @apply box-border m-0 p-0;
+  }
+
+  body {
+    @apply bg-background text-content1;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl font-bold leading-10;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold leading-10;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-medium leading-10;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl font-normal leading-8;
+  }
+
+  h5 {
+    @apply text-base md:text-lg font-normal leading-8;
+  }
+
+  h6 {
+    @apply text-sm md:text-base font-normal leading-6;
+  }
+
+  p {
+    @apply text-sm md:text-base font-light leading-6;
+  }
+}
+
+.btn-gradient {
+  @apply bg-gradient-to-br from-primary to-primary-dark;
+}
+
+.btn-gradient:active {
+  @apply bg-gradient-to-tl from-primary-light to-primary;
+}
+
+.btn-primary {
+  @apply btn-gradient w-28 rounded-3xl px-4 py-2 text-center text-background flex justify-center items-center;
+}
+
+.btn-disabled {
+  @apply bg-accent w-28 rounded-3xl px-4 py-2 text-center text-background flex justify-center items-center text-mute;
+}
+
+.img-size {
+  @apply w-full max-w-lg xl:max-w-xl;
+}
